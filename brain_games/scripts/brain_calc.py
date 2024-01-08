@@ -7,34 +7,23 @@ brain_games.greet()
 name = cli.welcome_user()
 
 
-def find_even():
+def find_value():
 
-    print('Answer "yes" if the number is even, otherwise answer "no".')
+    print('What is the result of the expression?')
 
     correct = 0
 
     while correct < 3:
-
-        count = random_init.random_val(100)
-        even_count = count % 2
-
-        print(f"Question: {count}")
+        expression = random_init.random_exp()
+        value = eval(expression)
+        print('Question: ' + expression)
         answer = prompt.string('Your answer: ')
-
-        if (even_count == 0 and answer == "yes") or \
-           (even_count and answer == "no"):
-
-            print("Correct!")
+        if answer == str(value):
+            print('Correct!')
             correct += 1
-
         else:
-            un_answer = "yes"
-
-            if answer == "yes":
-                un_answer = "no"
-
             print(f"'{answer}' is wrong answer ;(. ",
-                  f"Correct answer was '{un_answer}'.")
+                  f"Correct answer was '{str(value)}'.")
             break
 
     if correct == 3:
@@ -45,7 +34,7 @@ def find_even():
 
 def main():
 
-    find_even()
+    find_value()
 
 
 if __name__ == "__main__":

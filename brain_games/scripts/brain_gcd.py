@@ -6,6 +6,7 @@ from brain_games.scripts import brain_games
 brain_games.greet()
 name = cli.welcome_user()
 
+
 def find_gcd(num1, num2):
     while num1 != 0 and num2 != 0:
         if num1 > num2:
@@ -13,6 +14,7 @@ def find_gcd(num1, num2):
         else:
             num2 = num2 % num1
     return num1 + num2
+
 
 def play_gcd():
 

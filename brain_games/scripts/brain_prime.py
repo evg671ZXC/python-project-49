@@ -16,7 +16,7 @@ def check_is_prime(num):
 
 def find_prime_num():
 
-    print('What is the result of the expression?')
+    print('Answer "yes" if given number is prime. Otherwise answer "no".')
 
     correct = 0
 

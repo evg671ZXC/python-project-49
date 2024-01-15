@@ -1,11 +1,6 @@
 import random
 
 
-def random_val(limit):
-
-    return random.randint(1, limit)
-
-
 def random_exp():
 
     num_1 = random.randint(1, 100)

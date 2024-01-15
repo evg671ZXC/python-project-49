@@ -5,12 +5,35 @@
 
 This pack of five mini-games is designed to get your brain working
 <h2>Installation</h2>
-Tested on CPython 2.7, 3.7, 3.8, 3.9 and 3.10
 
-No requirements other than the standard library.
+Tested on CPython 3.7, 3.8, 3.9 and 3.10
+
+*No requirements other than the standard library.*
 ```
 pip install hexlet-code
 ```
 <h2>Description</h2>
 
-it will be here asciinema`s
+### brain-even
+
+https://asciinema.org/a/JJRNOFuL9CR4uskYbn3qcFA3L
+
+### brain-calc
+
+https://asciinema.org/a/uUBSIlkWpNjkKl5yvhJuIjcIE
+
+### brain-gcd
+
+https://asciinema.org/a/wXmePt58eZTREg0pRCsiuSFej
+
+### brain-progression
+
+https://asciinema.org/a/jxzyApQ29ipDBxaMbzBOjNLEw
+
+### brain-prime
+
+https://asciinema.org/a/CoUpfkAjv2k2QCRi7MM5gyoqM
+
+### brain-games all
+
+ https://asciinema.org/a/r2uiVSOaWJiHsdUYz9s7aKZX5

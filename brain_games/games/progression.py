@@ -8,7 +8,7 @@ def get_progression():
 
     step = random.randint(1, 5)
 
-    for i in range(9):
+    for i in range(10):
         sequence.append(sequence[i] + step)
 
     return sequence[:random.randint(5, 10)]
@@ -25,8 +25,6 @@ def play_progression_building(player):
 
     print('What number is missing in the progression?')
 
-    hidden = ".."
-
     for _ in range(3):
 
         progression = list(map(str, get_progression()))
@@ -35,7 +33,7 @@ def play_progression_building(player):
         correct_answer = progression[index]
 
         output_progression = progression.copy()
-        output_progression[index] = hidden
+        output_progression[index] = ".."
 
         print(f"Question: {' '.join(output_progression)}")
 

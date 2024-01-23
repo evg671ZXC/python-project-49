@@ -7,7 +7,7 @@ from brain_games.scripts import brain_games
 def main():
 
     brain_games.greet()
-    progression.find_value_progres(cli.welcome_user())
+    progression.play_progression_building(cli.welcome_user())
 
 
 if __name__ == "__main__":

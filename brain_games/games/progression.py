@@ -1,37 +1,52 @@
 import prompt
-from brain_games import random_init
+import random
 
 
-def find_value_progres(name):
+def get_progression():
+
+    sequence = [random.randint(1, 30)]
+
+    step = random.randint(1, 5)
+
+    for i in range(9):
+        sequence.append(sequence[i] + step)
+
+    return sequence[:random.randint(5, 10)]
+
+
+def get_random_index(sequence):
+
+    index = random.randint(0, len(sequence) - 1)
+
+    return index
+
+
+def play_progression_building(player):
 
     print('What number is missing in the progression?')
-    question = ".."
 
-    correct = 0
+    hidden = ".."
 
-    while correct < 3:
+    for _ in range(3):
 
-        progres = random_init.correct_prog()
-        index = random_init.get_random_choice(progres)
+        progression = list(map(str, get_progression()))
+        index = get_random_index(get_progression())
 
-        win_answer = progres[index]
+        correct_answer = progression[index]
 
-        hidden_prog = [] + progres
-        hidden_prog[index] = question
-        str_hidden_prog = ' '.join(hidden_prog)
-        print(f"Question: {str_hidden_prog}")
+        output_progression = progression.copy()
+        output_progression[index] = hidden
 
-        user_answer = prompt.string('Your answer: ')
+        print(f"Question: {' '.join(output_progression)}")
 
-        if user_answer == str(win_answer):
-            print('Correct!')
-            correct += 1
+        player_answer = prompt.string('Your answer: ')
+
+        if player_answer != correct_answer:
+            print(f"'{player_answer}' is wrong answer ;(.",
+                  f"Correct answer was '{correct_answer}'.\n",
+                  f"Let's try again, {player}!")
+            return
         else:
-            print(f"'{user_answer}' is wrong answer ;(. ",
-                  f"Correct answer was '{str(win_answer)}'.")
-            break
+            print('Correct!')
 
-    if correct == 3:
-        print(f'Congratulations, {name}!')
-    else:
-        print(f"Let's try again, {name}!")
+    print(f'Congratulations, {player}!')

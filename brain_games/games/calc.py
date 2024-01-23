@@ -1,27 +1,34 @@
 import prompt
-from brain_games import random_init
+import random
 
 
-def find_value(name):
+def play_value_expression(player):
 
     print('What is the result of the expression?')
+    for _ in range(3):
 
-    correct = 0
+        operand_1 = random.randint(1, 100)
+        operand_2 = random.randint(1, 50)
+        operator = random.choice("+-*")
+        if operator == '+':
+            value = operand_1 + operand_2
+        if operator == '-':
+            value = operand_1 - operand_2
+        if operator == '*':
+            value = operand_1 * operand_2
 
-    while correct < 3:
-        expression = random_init.random_exp()
-        value = eval(expression)
-        print('Question: ' + expression)
-        answer = prompt.string('Your answer: ')
-        if answer == str(value):
-            print('Correct!')
-            correct += 1
+        correct_answer = f'{value}'
+
+        print(f"Question: {operand_1} {operator} {operand_2}")
+
+        player_answer = prompt.string('Your answer: ')
+
+        if player_answer != correct_answer:
+            print(f"'{player_answer}' is wrong answer ;(.",
+                  f"Correct answer was '{correct_answer}'.\n",
+                  f"Let's try again, {player}!")
+            return
         else:
-            print(f"'{answer}' is wrong answer ;(. ",
-                  f"Correct answer was '{str(value)}'.")
-            break
+            print('Correct!')
 
-    if correct == 3:
-        print(f'Congratulations, {name}!')
-    else:
-        print(f"Let's try again, {name}!")
+    print(f'Congratulations, {player}!')

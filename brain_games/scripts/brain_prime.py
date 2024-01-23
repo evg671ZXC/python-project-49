@@ -7,7 +7,7 @@ from brain_games.scripts import brain_games
 def main():
 
     brain_games.greet()
-    prime.find_prime_num(cli.welcome_user())
+    prime.play_prime_number(cli.welcome_user())
 
 
 if __name__ == "__main__":

@@ -2,42 +2,35 @@ import prompt
 import random
 
 
-def check_is_prime(num):
+def is_prime(num):
     d = 2
     while num % d != 0:
         d += 1
     return num == d
 
 
-def find_prime_num(name):
+def play_prime_number(player):
 
     print('Answer "yes" if given number is prime. Otherwise answer "no".')
 
-    correct = 0
+    for _ in range(3):
 
-    while correct < 3:
         number = random.randint(1, 100)
 
-        print('Question: ' + str(number))
-        answer = prompt.string('Your answer: ')
-
-        if answer == 'yes' and check_is_prime(number):
-            print('Correct!')
-            correct += 1
-        elif answer == 'no' and not check_is_prime(number):
-            print('Correct!')
-            correct += 1
+        if is_prime(number):
+            correct_answer = 'yes'
         else:
-            un_answer = "yes"
+            correct_answer = 'no'
 
-            if answer == "yes":
-                un_answer = "no"
+        print(f"Question: {number}")
+        player_answer = prompt.string('Your answer: ')
 
-            print(f"'{answer}' is wrong answer ;(. ",
-                  f"Correct answer was '{un_answer}'.")
-            break
+        if player_answer != correct_answer:
+            print(f"'{player_answer}' is wrong answer ;(. ",
+                  f"Correct answer was '{correct_answer}'.\n",
+                  f"Let's try again, {player}!")
+            return
+        else:
+            print('Correct!')
 
-    if correct == 3:
-        print(f'Congratulations, {name}!')
-    else:
-        print(f"Let's try again, {name}!")
+    print(f'Congratulations, {player}!')

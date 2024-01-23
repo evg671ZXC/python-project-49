@@ -7,7 +7,7 @@ from brain_games.games import calc
 def main():
 
     brain_games.greet()
-    calc.find_value(cli.welcome_user())
+    calc.play_value_expression(cli.welcome_user())
 
 
 if __name__ == "__main__":

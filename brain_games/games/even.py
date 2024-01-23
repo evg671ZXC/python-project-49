@@ -2,37 +2,28 @@ import prompt
 import random
 
 
-def find_even(name):
+def play_even_value(player):
 
     print('Answer "yes" if the number is even, otherwise answer "no".')
 
-    correct = 0
+    for _ in range(3):
 
-    while correct < 3:
+        value = random.randint(1, 100)
 
-        count = random.randint(1, 100)
-        even_count = count % 2
+        print(f"Question: {value}")
+        player_answer = prompt.string('Your answer: ')
 
-        print(f"Question: {count}")
-        answer = prompt.string('Your answer: ')
-
-        if (even_count == 0 and answer == "yes") or \
-           (even_count and answer == "no"):
-
-            print("Correct!")
-            correct += 1
-
+        if value % 2:
+            correct_answer = 'no'
         else:
-            un_answer = "yes"
+            correct_answer = 'yes'
 
-            if answer == "yes":
-                un_answer = "no"
+        if player_answer != correct_answer:
+            print(f"'{player_answer}' is wrong answer ;(.",
+                  f"Correct answer was '{correct_answer}'.\n",
+                  f"Let's try again, {player}!")
+            return
+        else:
+            print('Correct!')
 
-            print(f"'{answer}' is wrong answer ;(. ",
-                  f"Correct answer was '{un_answer}'.")
-            break
-
-    if correct == 3:
-        print(f'Congratulations, {name}!')
-    else:
-        print(f"Let's try again, {name}!")
+    print(f'Congratulations, {player}!')

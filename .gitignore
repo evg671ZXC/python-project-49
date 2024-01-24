@@ -2,6 +2,7 @@
 __pycache__
 dist/
 dist
+brain_games/games/__pycache__/
 *.pyc
 .venv/
 .venv

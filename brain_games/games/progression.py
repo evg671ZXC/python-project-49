@@ -11,12 +11,14 @@ def get_progression():
     for i in range(9):
         sequence.append(sequence[i] + step)
 
-    return sequence[:random.randint(5, 10)]
+    sequence = sequence[:random.randint(5, 10)]
+
+    return sequence
 
 
 def get_random_index(sequence):
 
-    index = random.randint(0,len(sequence) - 1)
+    index = random.randint(0, len(sequence) - 1)
 
     return index
 

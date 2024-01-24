@@ -11,9 +11,7 @@ def get_progression():
     for i in range(9):
         sequence.append(sequence[i] + step)
 
-    sequence = sequence[:random.randint(5, 10)]
-
-    return sequence
+    return sequence[:random.randint(5, 10)]
 
 
 def get_random_index(sequence):
@@ -30,7 +28,7 @@ def play_progression_building(player):
     for _ in range(3):
 
         progression = list(map(str, get_progression()))
-        index = get_random_index(get_progression())
+        index = get_random_index(progression)
 
         correct_answer = progression[index]
 

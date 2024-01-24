@@ -1,12 +1,9 @@
 *.egg-info
-__pycache__
+__pycache__/
 dist/
 dist
-brain_games/games/__pycache__/
 *.pyc
 .venv/
-.venv
-**__pycache__
 .coverage
 coverage.xml
 .pytest_cache/

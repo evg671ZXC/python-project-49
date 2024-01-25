@@ -20,30 +20,74 @@ This project was built using these tools:
 Tested on CPython 3.10
 
 ```
+#Сloned this repository into its current folder
+
+git clone git@github.com:evg671ZXC/python-project-49.git .
+```
+```
+#Install the necessary packages:
+
+pip install prompt
+
 pip install hexlet-code
+```
+```
+#To install a package from the operating system, use the command:
+
+python3 -m pip install --user dist/*.whl
+```
+### *In cases where you use [Poetry](https://python-poetry.org/)*
+```
+#Copy the Makefile from this repository
+#Сreate and update our virtual environment
+
+make install
+
+#To install a package from the operating system, use the command:
+
+make package install
+```
+
+```
+#Let's check that everything was installed correctly:
+
+brain-games
+
+->Welcome to the Brain Games!
+->May I have your name? _
 ```
 <h2>Description</h2>
 
 ### brain-even
 
-[![asciicast](https://asciinema.org/a/JJRNOFuL9CR4uskYbn3qcFA3L.svg)](https://asciinema.org/a/JJRNOFuL9CR4uskYbn3qcFA3L)
+*Game to find the parity of a number*
+
+[![asciicast](https://asciinema.org/a/RSbh72BilIpYX4EDMB50z0Wls.svg)](https://asciinema.org/a/RSbh72BilIpYX4EDMB50z0Wls)
 
 ### brain-calc
 
-[![asciicast](https://asciinema.org/a/uUBSIlkWpNjkKl5yvhJuIjcIE.svg)](https://asciinema.org/a/uUBSIlkWpNjkKl5yvhJuIjcIE)
+*Game «add in your mind»*
+
+[![asciicast](https://asciinema.org/a/rJ6if8gqmjQmzWuxcpwHGlpDg.svg)](https://asciinema.org/a/rJ6if8gqmjQmzWuxcpwHGlpDg)
 
 ### brain-gcd
 
-[![asciicast](https://asciinema.org/a/wXmePt58eZTREg0pRCsiuSFej.svg)](https://asciinema.org/a/wXmePt58eZTREg0pRCsiuSFej)
+*Find the greatest common divisor*
+
+[![asciicast](https://asciinema.org/a/NlNyVUjiDhjJJ2Zoo8zPqZblo.svg)](https://asciinema.org/a/NlNyVUjiDhjJJ2Zoo8zPqZblo)
 
 ### brain-progression
 
-[![asciicast](https://asciinema.org/a/jxzyApQ29ipDBxaMbzBOjNLEw.svg)](https://asciinema.org/a/jxzyApQ29ipDBxaMbzBOjNLEw)
+*Here you will try to find the missing term of the arithmetic progression*
+
+[![asciicast](https://asciinema.org/a/FWs3gsGhtqJCl1eHURsMVxqHI.svg)](https://asciinema.org/a/FWs3gsGhtqJCl1eHURsMVxqHI)
 
 ### brain-prime
 
-[![asciicast](https://asciinema.org/a/CoUpfkAjv2k2QCRi7MM5gyoqM.svg)](https://asciinema.org/a/CoUpfkAjv2k2QCRi7MM5gyoqM)
+*Try to find a prime number from the given numbers*
+
+[![asciicast](https://asciinema.org/a/vowawCDazmYv3KdNZquBeKPDQ.svg)](https://asciinema.org/a/vowawCDazmYv3KdNZquBeKPDQ)
 
 ### brain-games all
 
-[![asciicast](https://asciinema.org/a/r2uiVSOaWJiHsdUYz9s7aKZX5.svg)](https://asciinema.org/a/r2uiVSOaWJiHsdUYz9s7aKZX5)
+[![asciicast](https://asciinema.org/a/V4zYl0XVA9bTzaycI4EP3Rbip.svg)](https://asciinema.org/a/V4zYl0XVA9bTzaycI4EP3Rbip)

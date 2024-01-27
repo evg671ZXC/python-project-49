@@ -1,23 +1,24 @@
 import prompt
 import random
+from brain_games import consts
 
 
-def play_value_expression(player):
+def play_brain_calc(player_name):
 
     print('What is the result of the expression?')
-    for _ in range(3):
+    for _ in range(consts.ROUNDS):
 
-        operand_1 = random.randint(1, 100)
-        operand_2 = random.randint(1, 50)
+        operand_1 = random.randint(consts.MIN_LIMIT, consts.MAX_LIMIT)
+        operand_2 = random.randint(consts.MIN_EXTRA_LIMIT, consts.MAX_EXTRA_LIMIT)
         operator = random.choice("+-*")
         if operator == '+':
             value = operand_1 + operand_2
-        if operator == '-':
+        elif operator == '-':
             value = operand_1 - operand_2
-        if operator == '*':
+        else:
             value = operand_1 * operand_2
 
-        correct_answer = f'{value}'
+        correct_answer = str(value)
 
         print(f"Question: {operand_1} {operator} {operand_2}")
 
@@ -26,9 +27,9 @@ def play_value_expression(player):
         if player_answer != correct_answer:
             print(f"'{player_answer}' is wrong answer ;(.",
                   f"Correct answer was '{correct_answer}'.\n",
-                  f"Let's try again, {player}!")
+                  f"Let's try again, {player_name}!")
             return
         else:
             print('Correct!')
 
-    print(f'Congratulations, {player}!')
+    print(f'Congratulations, {player_name}!')

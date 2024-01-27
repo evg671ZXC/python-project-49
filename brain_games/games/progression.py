@@ -1,50 +1,43 @@
 import prompt
 import random
+from brain_games import consts
 
 
 def get_progression():
 
     sequence = [random.randint(1, 30)]
 
-    step = random.randint(1, 5)
+    step = random.randint(1, consts.STEP)
 
-    for i in range(9):
+    for i in range(random.randint(5, consts.PROGRESSION_LENGHT)):
         sequence.append(sequence[i] + step)
 
-    return sequence[:random.randint(5, 10)]
+    return sequence
 
 
-def get_random_index(sequence):
-
-    index = random.randint(0, len(sequence) - 1)
-
-    return index
-
-
-def play_progression_building(player):
+def play_progression_building(player_name):
 
     print('What number is missing in the progression?')
 
-    for _ in range(3):
+    for _ in range(consts.ROUNDS):
 
         progression = list(map(str, get_progression()))
-        index = get_random_index(progression)
+        index = random.randint(0, len(progression) - 1)
 
         correct_answer = progression[index]
 
-        output_progression = progression.copy()
-        output_progression[index] = ".."
+        progression[index] = ".."
 
-        print(f"Question: {' '.join(output_progression)}")
+        print(f"Question: {' '.join(progression)}")
 
         player_answer = prompt.string('Your answer: ')
 
         if player_answer != correct_answer:
             print(f"'{player_answer}' is wrong answer ;(.",
                   f"Correct answer was '{correct_answer}'.\n",
-                  f"Let's try again, {player}!")
+                  f"Let's try again, {player_name}!")
             return
         else:
             print('Correct!')
 
-    print(f'Congratulations, {player}!')
+    print(f'Congratulations, {player_name}!')

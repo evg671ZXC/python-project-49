@@ -1,5 +1,6 @@
 import prompt
 import random
+from brain_games import consts
 
 
 def is_prime(num):
@@ -9,13 +10,13 @@ def is_prime(num):
     return num == d
 
 
-def play_prime_number(player):
+def play_prime_number(player_name):
 
     print('Answer "yes" if given number is prime. Otherwise answer "no".')
 
-    for _ in range(3):
+    for _ in range(consts.ROUNDS):
 
-        number = random.randint(1, 100)
+        number = random.randint(consts.MIN_LIMIT, consts.MAX_LIMIT)
 
         if is_prime(number):
             correct_answer = 'yes'
@@ -28,9 +29,9 @@ def play_prime_number(player):
         if player_answer != correct_answer:
             print(f"'{player_answer}' is wrong answer ;(. ",
                   f"Correct answer was '{correct_answer}'.\n",
-                  f"Let's try again, {player}!")
+                  f"Let's try again, {player_name}!")
             return
         else:
             print('Correct!')
 
-    print(f'Congratulations, {player}!')
+    print(f'Congratulations, {player_name}!')

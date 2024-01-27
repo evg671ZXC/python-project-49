@@ -1,5 +1,6 @@
 import prompt
 import random
+from brain_games import consts
 
 
 def find_gcd(num1, num2):
@@ -8,29 +9,29 @@ def find_gcd(num1, num2):
             num1 = num1 % num2
         else:
             num2 = num2 % num1
-    return f"{num1 + num2}"
+    return str(num1 + num2)
 
 
-def play_gcd(player):
+def play_gcd(player_name):
 
     print('Find the greatest common divisor of given numbers.')
 
-    for _ in range(3):
+    for _ in range(consts.ROUNDS):
 
-        one = random.randint(1, 100)
-        two = random.randint(1, 100)
+        num1 = random.randint(consts.MIN_LIMIT, consts.MAX_LIMIT)
+        num2 = random.randint(consts.MIN_EXTRA_LIMIT, consts.MAX_EXTRA_LIMIT)
 
-        gcd = find_gcd(one, two)
-        print(f'Question: {one} {two}')
+        gcd = find_gcd(num1, num2)
+        print(f'Question: {num1} {num2}')
 
         player_answer = prompt.string('Your answer: ')
 
         if player_answer != gcd:
             print(f"'{player_answer}' is wrong answer ;(.",
                   f"Correct answer was '{gcd}'.\n",
-                  f"Let's try again, {player}!")
+                  f"Let's try again, {player_name}!")
             return
         else:
             print('Correct!')
 
-    print(f'Congratulations, {player}!')
+    print(f'Congratulations, {player_name}!')

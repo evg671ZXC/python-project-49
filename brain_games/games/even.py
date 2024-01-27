@@ -1,14 +1,15 @@
 import prompt
 import random
+from brain_games import consts
 
 
-def play_even_value(player):
+def play_even_value(player_name):
 
     print('Answer "yes" if the number is even, otherwise answer "no".')
 
-    for _ in range(3):
+    for _ in range(consts.ROUNDS):
 
-        value = random.randint(1, 100)
+        value = random.randint(consts.MIN_LIMIT, consts.MAX_LIMIT)
 
         print(f"Question: {value}")
         player_answer = prompt.string('Your answer: ')
@@ -21,9 +22,9 @@ def play_even_value(player):
         if player_answer != correct_answer:
             print(f"'{player_answer}' is wrong answer ;(.",
                   f"Correct answer was '{correct_answer}'.\n",
-                  f"Let's try again, {player}!")
+                  f"Let's try again, {player_name}!")
             return
         else:
             print('Correct!')
 
-    print(f'Congratulations, {player}!')
+    print(f'Congratulations, {player_name}!')

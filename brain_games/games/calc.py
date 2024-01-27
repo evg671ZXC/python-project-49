@@ -8,19 +8,19 @@ def play_brain_calc(player_name):
     print('What is the result of the expression?')
     for _ in range(consts.ROUNDS):
 
-        operand_1 = random.randint(consts.MIN_LIMIT, consts.MAX_LIMIT)
-        operand_2 = random.randint(consts.MIN_EXTRA_LIMIT, consts.MAX_EXTRA_LIMIT)
+        num_1 = random.randint(consts.MIN_LIMIT, consts.MAX_LIMIT)
+        num_2 = random.randint(consts.MIN_EXTRA_LIMIT, consts.MAX_EXTRA_LIMIT)
         operator = random.choice("+-*")
         if operator == '+':
-            value = operand_1 + operand_2
+            value = num_1 + num_2
         elif operator == '-':
-            value = operand_1 - operand_2
+            value = num_1 - num_2
         else:
-            value = operand_1 * operand_2
+            value = num_1 * num_2
 
         correct_answer = str(value)
 
-        print(f"Question: {operand_1} {operator} {operand_2}")
+        print(f"Question: {num_1} {operator} {num_2}")
 
         player_answer = prompt.string('Your answer: ')
 

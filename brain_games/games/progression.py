@@ -5,11 +5,11 @@ from brain_games import consts
 
 def get_progression():
 
-    sequence = [random.randint(1, 30)]
+    sequence = [random.randint(*consts.START_PROGRESSION)]
 
-    step = random.randint(1, consts.STEP)
+    step = random.randint(*consts.STEP_PROGRESSION)
 
-    for i in range(random.randint(5, consts.PROGRESSION_LENGHT)):
+    for i in range(random.randint(*consts.PROGRESSION_LENGTH)):
         sequence.append(sequence[i] + step)
 
     return sequence
@@ -19,7 +19,7 @@ def play_progression_building(player_name):
 
     print('What number is missing in the progression?')
 
-    for _ in range(consts.ROUNDS):
+    for _ in range(consts.ROUNDS_TO_WIN):
 
         progression = list(map(str, get_progression()))
         index = random.randint(0, len(progression) - 1)

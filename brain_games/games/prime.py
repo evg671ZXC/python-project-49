@@ -14,9 +14,9 @@ def play_prime_number(player_name):
 
     print('Answer "yes" if given number is prime. Otherwise answer "no".')
 
-    for _ in range(consts.ROUNDS):
+    for _ in range(consts.ROUNDS_TO_WIN):
 
-        number = random.randint(consts.MIN_LIMIT, consts.MAX_LIMIT)
+        number = random.randint(*consts.LIMITS_PRIME)
 
         if is_prime(number):
             correct_answer = 'yes'

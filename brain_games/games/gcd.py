@@ -16,19 +16,19 @@ def play_gcd(player_name):
 
     print('Find the greatest common divisor of given numbers.')
 
-    for _ in range(consts.ROUNDS):
+    for _ in range(consts.ROUNDS_TO_WIN):
 
-        num1 = random.randint(consts.MIN_LIMIT, consts.MAX_LIMIT)
-        num2 = random.randint(consts.MIN_EXTRA_LIMIT, consts.MAX_EXTRA_LIMIT)
+        num1 = random.randint(*consts.FIRST_LIMITS_GCD)
+        num2 = random.randint(*consts.SECOND_LIMITS_GCD)
 
-        gcd = find_gcd(num1, num2)
+        correct_answer = find_gcd(num1, num2)
         print(f'Question: {num1} {num2}')
 
         player_answer = prompt.string('Your answer: ')
 
-        if player_answer != gcd:
+        if player_answer != correct_answer:
             print(f"'{player_answer}' is wrong answer ;(.",
-                  f"Correct answer was '{gcd}'.\n",
+                  f"Correct answer was '{correct_answer}'.\n",
                   f"Let's try again, {player_name}!")
             return
         else:

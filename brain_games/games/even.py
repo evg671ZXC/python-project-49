@@ -7,9 +7,9 @@ def play_even_value(player_name):
 
     print('Answer "yes" if the number is even, otherwise answer "no".')
 
-    for _ in range(consts.ROUNDS):
+    for _ in range(consts.ROUNDS_TO_WIN):
 
-        value = random.randint(consts.MIN_LIMIT, consts.MAX_LIMIT)
+        value = random.randint(*consts.LIMITS_EVEN)
 
         print(f"Question: {value}")
         player_answer = prompt.string('Your answer: ')

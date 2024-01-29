@@ -19,7 +19,7 @@ This project was built using these tools:
 
 #### Cloned this repository into its current folder:
 ```
-git clone https://github.com/evg671ZXC/python-project-49.git .
+git clone https://github.com/evg671ZXC/python-project-49.git
 ```
 #### For the package to work correctly it is necessary to use [Poetry](https://python-poetry.org/):
 

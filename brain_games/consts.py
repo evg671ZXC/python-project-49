@@ -1,17 +1,21 @@
 # Settings for games
-ROUNDS = 3
+ROUNDS_TO_WIN = 3
 
 # brain-even
-# brain-prime
-# brain-calc
-# brain-gcd
-MIN_LIMIT = 1
-MAX_LIMIT = 100
+LIMITS_EVEN = (1, 100)
 
-# When using 2 numbers
-MIN_EXTRA_LIMIT = 1
-MAX_EXTRA_LIMIT = 50
+# brain-prime
+LIMITS_PRIME = (1, 100)
+
+# brain-calc
+FIRST_LIMITS_CALC = (1, 100)
+SECOND_LIMITS_CALC = (1, 50)
+
+# brain-gcd
+FIRST_LIMITS_GCD = (1, 100)
+SECOND_LIMITS_GCD = (1, 50)
 
 # brain-progression
-PROGRESSION_LENGHT = 9
-STEP = 5
+START_PROGRESSION = (1, 30)
+STEP_PROGRESSION = (1, 5)
+PROGRESSION_LENGTH = (5, 9)

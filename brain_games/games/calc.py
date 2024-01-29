@@ -6,10 +6,10 @@ from brain_games import consts
 def play_brain_calc(player_name):
 
     print('What is the result of the expression?')
-    for _ in range(consts.ROUNDS):
+    for _ in range(consts.ROUNDS_TO_WIN):
 
-        num_1 = random.randint(consts.MIN_LIMIT, consts.MAX_LIMIT)
-        num_2 = random.randint(consts.MIN_EXTRA_LIMIT, consts.MAX_EXTRA_LIMIT)
+        num_1 = random.randint(*consts.FIRST_LIMITS_CALC)
+        num_2 = random.randint(*consts.SECOND_LIMITS_CALC)
         operator = random.choice("+-*")
         if operator == '+':
             value = num_1 + num_2

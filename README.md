@@ -30,7 +30,7 @@ poetry config virtualenvs.in-project true
 #### After execution, commands from the [Makefile](https://guides.hexlet.io/ru/makefile-as-task-runner/) will become available to us:
 **It is recommended not to install third-party packages in the global environment*
 ```
-poetry install
+make install
 ```
 
 #### This command collects archives of source code:

@@ -54,7 +54,7 @@ brain-even
 
 *Game to find the parity of a number*
 
-[![asciicast](https://asciinema.org/a/RSbh72BilIpYX4EDMB50z0Wls.svg)](https://asciinema.org/a/RSbh72BilIpYX4EDMB50z0Wls)
+[![asciicast](https://asciinema.org/a/MY2JsDQBLqTH1ZFvSofIZZvUQ.svg)](https://asciinema.org/a/MY2JsDQBLqTH1ZFvSofIZZvUQ)
 
 ```
 brain-calc
@@ -62,7 +62,7 @@ brain-calc
 
 *Game «add in your mind»*
 
-[![asciicast](https://asciinema.org/a/rJ6if8gqmjQmzWuxcpwHGlpDg.svg)](https://asciinema.org/a/rJ6if8gqmjQmzWuxcpwHGlpDg)
+[![asciicast](https://asciinema.org/a/Dx5tkQ0AsbKzkQjivGt940lPi.svg)](https://asciinema.org/a/Dx5tkQ0AsbKzkQjivGt940lPi)
 
 ```
 brain-gcd
@@ -70,7 +70,7 @@ brain-gcd
 
 *Find the greatest common divisor*
 
-[![asciicast](https://asciinema.org/a/NlNyVUjiDhjJJ2Zoo8zPqZblo.svg)](https://asciinema.org/a/NlNyVUjiDhjJJ2Zoo8zPqZblo)
+[![asciicast](https://asciinema.org/a/KRjzL0i4uFgsRYDRavJfUC2xD.svg)](https://asciinema.org/a/KRjzL0i4uFgsRYDRavJfUC2xD)
 
 ```
 brain-progression
@@ -78,7 +78,7 @@ brain-progression
 
 *Here you will try to find the missing term of the arithmetic progression*
 
-[![asciicast](https://asciinema.org/a/FWs3gsGhtqJCl1eHURsMVxqHI.svg)](https://asciinema.org/a/FWs3gsGhtqJCl1eHURsMVxqHI)
+[![asciicast](https://asciinema.org/a/Y1X9V3GSnbvsWEXA1p4LEVIe9.svg)](https://asciinema.org/a/Y1X9V3GSnbvsWEXA1p4LEVIe9)
 
 ```
 brain-prime
@@ -86,8 +86,8 @@ brain-prime
 
 *Try to find a prime number from the given numbers*
 
-[![asciicast](https://asciinema.org/a/vowawCDazmYv3KdNZquBeKPDQ.svg)](https://asciinema.org/a/vowawCDazmYv3KdNZquBeKPDQ)
+[![asciicast](https://asciinema.org/a/eVpMnzLkPtFoHVQ4cW99m8UlB.svg)](https://asciinema.org/a/eVpMnzLkPtFoHVQ4cW99m8UlB)
 
 ### brain-games all
 
-[![asciicast](https://asciinema.org/a/V4zYl0XVA9bTzaycI4EP3Rbip.svg)](https://asciinema.org/a/V4zYl0XVA9bTzaycI4EP3Rbip)
+[![asciicast](https://asciinema.org/a/fSWR3KR2pxK5ghBRhOW62bJjC.svg)](https://asciinema.org/a/fSWR3KR2pxK5ghBRhOW62bJjC)
